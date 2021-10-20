@@ -1,0 +1,844 @@
+
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+		
+		/* Category 애니메이션 시작 */
+		@keyframes categoryFadeIn{
+			0%{
+				margin-right : -500px;
+			}
+			100%{
+				margin-right : 0px;
+			}
+		}
+		
+		@keyframes categoryFadeOut{
+			0%{
+				margin-right : 0px;
+			}
+			100%{
+				margin-right : -500px;
+				display : none;
+			}
+		}
+		
+		@keyframes slowUpArticleColor{
+			0%{
+				background-color : #F9F9F9;
+			}
+			100%{
+				background-color : #E9E9E9;
+			}
+		}
+		
+		@keyframes slowUpCategoryColor{
+			0%{
+				color : #FFFFFF;
+			}
+			100%{
+				color : #C9C9C9;
+			}
+		}
+		
+		@keyframes slowUpNavTagColor{
+			0%{
+				color : #2D2D2D;
+			}
+			100%{
+				color : #F1F1F1;
+			}
+		}
+		
+		@keyframes myProjectSlowUp{
+			0%{
+				background-color : rgba(0,0,0,0);
+				color : rgba(0,0,0,0);
+			}
+			100%{
+				background-color : rgba(0,0,0,0.5);
+				color : white;
+			}
+		}
+		
+		@keyframes additionalBtnSlowUp{
+			0%{
+				background-color : #2D2D2D;
+			}
+			100%{
+				background-color : #000000;
+			}
+		}
+		
+		/* Category 애니메이션 끝 */
+		body {
+  		overflow: overlay;
+		}
+		/* 네비게이션 시작 */
+		.nav a:link {
+  		color : #2D2D2D;
+			text-decoration:none !important 
+		}
+		.nav a:visited {
+			color : #2D2D2D;
+			text-decoration:none !important 
+		}
+		.nav a:hover {
+  		animation : slowUpNavTagColor 0.2s forwards ease-out;
+		}
+		.nav a:active {
+			color : #2D2D2D;
+			text-decoration:none !important 
+		}
+		
+		body{
+			margin : 0;
+		}
+		
+		.nav{
+			position : fixed;
+			top : 0px;
+			display : flex;
+			align-items : center;
+			flex-direction : row;
+			justify-content : center;
+			height : 55px;
+			width : 100%;
+			background-color : rgba(255,255,255,1);
+			z-index : 1;
+			filter: drop-shadow(0px 0px 0.5px #2D2D2D);
+		}
+		
+		.navInner{
+			position : absolute;
+			display : flex;
+			flex-direction : row;
+			justify-content : space-between;
+			align-items : center;
+			width : 50%;
+			min-width : 500px;
+			height : 100%;
+		}
+		
+		@keyframes aniS{
+			0%{
+				filter : opacity(0.5) drop-shadow(0 0 0 #2D2D2D);
+			}
+			100%{
+				filter : opacity(0.1) drop-shadow(0 0 0 #FFFFFF);
+			}
+		}
+		
+		.navCategoryBtn{
+			pointer-events : auto; cursor : pointer; -ms-user-select: none;
+			-moz-user-select: -moz-none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			user-select:none;
+			/*color : #2D2D2D;*/
+			filter : opacity(1) drop-shadow(0 0 0 #2D2D2D);
+		}
+		
+		.navCategoryBtn:hover{
+			/*animation : slowUpNavTagColor 0.2s forwards ease-out;*/
+			animation : aniS 0.2s forwards ease-out;
+		}
+		.nav a{
+			font-family : 'Noto Sans KR', sans-serif;
+			font-size : 16px;
+			font-weight : 700;
+			color : #2D2D2D;
+		}
+		.nav span{
+			font-family : 'Noto Sans KR', sans-serif;
+			font-size : 16px;
+			font-weight : 700;
+			color : #2D2D2D;
+		}
+		
+		.logo{
+			position : absolute;
+			color : #2D2D2D;
+		}
+		
+		.blogTitle{
+			width : 200px;
+			height : auto;
+			white-space : nowrap;
+			text-overflow : ellipsis;
+			overflow : hidden;
+		}
+		
+		/* 네비게이션 끝 */
+		
+		/* 카테고리 시작 */
+		.categoryBackground{
+			position : fixed;
+			right : 0;
+			margin-right : 0px;
+			background-color : #2D2D2D;
+			width : 430px;
+			height : 100vh;
+			display : none;
+			justify-content : flext-start;
+			flex-direction : column;
+			animation : categoryFadeIn 1s ease-in-out;
+			overflow-y : scroll;
+			z-index : 2;
+		} a {
+			font-family : 'Noto Sans KR', sans-serif;
+			font-size : 16px;
+			font-weight : 500;
+			color : #2D2D2D;
+		} span{
+			font-family : 'Noto Sans KR', sans-serif;
+			font-size : 16px;
+			font-weight : 500;
+			color : #2D2D2D;
+		}
+		
+		.categoryBackgroundTop{
+			margin-left : 20px;
+			margin-top : 20px;
+			display : flex;
+			justify-content : space-between;
+			flex-direction : column;
+			width : 50%;
+			height : 20px;
+		}
+		
+		.categoryCloseCircle{
+			display : flex;
+			justify-content : center;
+			align-items : center;
+			width : 50px;
+			height : 100px;
+			border-radius : 50px 0px 0px 50px;
+			background-color : #2D2D2D;
+			position : fixed;
+			margin-top : 45vh;
+			margin-left : -45px;
+			pointer-events : auto; cursor : pointer; -ms-user-select: none;
+			-moz-user-select: -moz-none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			user-select:none;
+		}
+		
+		.categoryList{
+			color : #FFFFFF;
+		}
+		.categoryList a{
+			font-weight : 300;
+		}
+		.categoryList a:link {
+  		color : #FFFFFF;
+			text-decoration:none; !important 
+		}
+		.categoryList a:visited {
+			color : #FFFFFF;
+			text-decoration:none; !important 
+		}
+		.categoryList a:hover {
+			animation : slowUpCategoryColor 0.3s forwards ease-out;
+		}
+		.categoryList a:active {
+			color : #FFFFFF;
+			text-decoration:none !important 
+		}
+		.categoryList span{
+			font-weight : 300;
+			color : #C9C9C9;
+			font-size : 14px;
+		}
+		/* 카테고리 끝 */
+		
+		/* 글 리스트 시작 */
+		
+		.articleListLayer{
+			position : absolute;
+			width : 100vw;
+			height : 100vh;
+			z-index : 0;
+		} 
+		.artlcieListLayer a {
+			font-family : 'Noto Sans KR', sans-serif;
+			font-size : 16px;
+			font-weight : 500;
+			color : #2D2D2D;
+		} 
+		.artlcieListLayer span {
+			font-family : 'Noto Sans KR', sans-serif;
+			font-size : 16px;
+			font-weight : 500;
+			color : #2D2D2D;
+		} 
+		.artlcieListLayer div {
+			font-family : 'Noto Sans KR', sans-serif;
+			font-size : 16px;
+			font-weight : 500;
+			color : #2D2D2D;
+		}
+		
+		.articleListLayer a:link {
+  		color : #FFFFFF;
+			text-decoration:none; !important 
+		}
+		.articleListLayer a:visited {
+			color : #FFFFFF;
+			text-decoration:none; !important 
+		}
+		.articleListLayer a:hover {
+  		color : #626262; !important
+		}
+		.articleListLayer a:active {
+			color : #FFFFFF;
+			text-decoration:none !important 
+		}
+		
+		.article{
+			margin-top : 10px;
+			background-color : #F9F9F9;
+			border-radius : 5px;
+			width : 900px;
+			height : 200px;
+			display : flex;
+			justify-content : flex-start;
+		}
+		.article:nth-child(1){
+			margin-top: 65px;
+		}
+		.article:hover{
+			background-color : #E9E9E9; !impotant;
+			animation : slowUpArticleColor 0.3s ease-out;
+		}
+		
+		.articleImage{
+			margin-left : 5px;
+			margin-right : 5px;
+			margin-top : 5px;
+			border-radius : 5px;
+			width : 190px;
+			height : 190px;
+			display : flex;
+			flex : none;
+			justify-content : center;
+			align-items : center;
+			background-color : #FFFFFF;
+			overflow : hidden;
+		}
+		.articleImage img {
+			border-radius : 5px;
+			width : 180px;
+			height : 180px;
+			object-fit : contain;
+		}
+		
+		.articleText{
+			padding-left : 30px;
+			padding-bottom : 20px;
+			padding-right : 30px;
+			padding-top : 20px;
+			width : 100%;
+			height : 160px;
+			display : flex;
+			flex-direction : column;
+			justify-content : space-between;
+			overflow : hidden;
+		}
+		
+		.articleTextTitle{
+			width : 100%;
+			font-size : 24px;
+			font-weight : 900;
+			text-align : left;
+			white-space : nowrap;
+			text-overflow : ellipsis;
+			overflow : hidden;
+		}
+		
+		.articleTextBody{
+			width : 100%;
+			height : 105px;
+			font-size : 15px;
+			font-weight : 400;
+			text-align : left;
+			display: flex;
+			align-items : flex-start;
+			overflow : hidden;
+		}
+		
+		.articleTextFoot{
+			width : 100%;
+			padding-top : 2px;
+			font-size : 13px;
+			font-weight : 400;
+			color : #ACACAC;
+			text-align : left;
+			white-space : nowrap;
+			text-overflow : ellipsis;
+			overflow : hidden;
+		}
+		/* 글 리스트 끝 */
+		
+		/* 글 본문 시작 */
+		
+		.articleMain{
+			margin-top : 65px;
+			width : 900px;
+			height : auto;
+			display : flex;
+			flex-direction : column;
+			justify-content : flex-start;
+		}
+		
+		.articleMainAuthor{
+			width : 900px;
+			height : 160px;
+			display : flex;
+			justify-content : center;
+			align-items : center;
+		}
+		
+		.articleMainAuthor span{
+			font-family : 'Noto Sans KR', sans-serif;
+		}
+		
+		.articleMainAuthorImg{
+			width : 160px;
+			height : 160px;
+			border-radius : 80px; 
+			flex : none;
+		}
+		
+		.articleMainAuthorInfo{
+			margin-left : 20px;
+			width : 250px;
+			height : 160px;
+			display : flex;
+			flex-direction : column;
+			justify-content : center;
+			align-items : left;
+			overflow : hidden;
+		}
+		
+		.author{
+			font-weight : 900;
+			font-size : 23px;
+			text-align : left;
+		}
+		
+		.blogInfo{
+			font-weight : 400;
+			font-size : 16px;
+			color : #626262;
+			text-align : left;
+		}
+		
+		.additionalBtn{
+			margin-top : 5px;
+			width : 250px;
+			height : 40px;
+			border-radius : 5px;
+			background-color : #2D2D2D;
+		}
+		
+		.additionalBtn:hover{
+			animation : additionalBtnSlowUp 0.5s forwards ease-out;
+		}
+		
+		.additionalBtnText{
+			display: table-cell;
+			text-align: left;
+			vertical-align: middle;
+			color : #FFFFFF;
+			font-size : 20px;
+			font-weight : 500;
+			height : 40px;
+		}
+		
+		.articleHead{
+			margin-top : 30px;
+			width : 900px;
+			font-size : 32px;
+			font-weight : 700;
+			display : inline-block; 
+			text-align : center;
+			word-wrap : break-word;
+		}
+		
+		.articleHeadSub{
+			color : #626262;
+			font-size : 16px;
+			font-weight : 400;
+		}
+		
+		.articleHeadSub a{
+			font-size : 16px;
+			font-weight : 400;
+			color : #626262 !important;
+		}
+		
+		.articleBody{
+			font-size : 18px;
+			font-weight : 400;
+			color : black;
+			text-align : left;
+			word-wrap : break-word;
+		}
+		
+		.articleBody a{
+			color : #0094FF !important;
+			font-weight : 400;
+		}
+		
+		.comments{
+			display : flex;
+			flex-direction : column;
+			justify-content : flex-start;
+			align-items : center;
+			width : 100%;
+			height : auto;
+		}
+		
+		.commentsAddBox{
+			background-color : #F5F5F5;
+			border-radius : 15px;
+			width : 600px;
+			height : 140px;
+			display : flex;
+			justify-content : flex-start;
+			align-items : center;
+		}
+		
+		.commentsInputForm{
+			font-family : 'Noto Sans KR', sans-serif;
+			font-size : 16px;
+			color : #2D2D2D;
+			border-radius : 15px;
+			background-color : rgba(0,0,0,0);
+			border : rgba(0,0,0,0);
+			resize:none;
+			padding : 10px;
+			width : 560px;
+			height : 140px;
+			overflow : auto;
+			text-align : left;
+			-ms-overflow-style: none; /* IE and Edge */
+		}
+		.commentsInputForm::-webkit-scrollbar {
+    	display: none; /* Chrome, Safari, Opera*/
+		}
+		.commentsInputForm:focus {
+    	outline: none;
+		}
+		
+		.commentsInputButton{
+    	width: auto;
+    	height: auto;
+    	border: 0px;
+ 			cursor:pointer;
+ 			outline: 0;
+		}
+		
+		/* 댓글 시작 */
+		.userCommentsWrap{
+			margin-top : 10px;
+			width : 590px;
+			display : flex;
+			justify-content : flex-start;
+			flex-direction : column;
+		}
+		
+		.userCommentsInfoWrap{
+			width : 590px;
+			height : 50px;
+			display : flex;
+			justify-content : flex-start;
+		}
+		
+		.userCommentsImg{
+			width : 50px;
+			height : 50px;
+			border-radius : 25px; 
+			flex : none;
+		}
+		
+		.userCommentsName{
+			display : flex;
+			align-items : center;
+			padding-left: 5px;
+			flex : none;
+		}
+		
+		.userCommentsName a{
+			color : #2D2D2D !important;
+			height : 50px;
+			font-size : 14px;
+			color : #2D2D2D;
+			font-weight : 500;
+			display : flex;
+			align-items : center;
+			flex : none;
+		}
+		
+		.userCommentsNameSub{
+			color : #C4C4C4;
+			font-size : 12px;
+			font-weight : 500;
+			flex : none;
+		}
+		
+		.userCommentsControl{
+			width : 100%;
+			display : flex;
+			align-items : center;
+			justify-content : flex-end;
+		}
+		
+		.commentsText{
+			background-color : #2D2D2D;
+			border-radius : 10px;
+			width : 535px;
+			margin-left : 45px;
+			height : auto;
+			padding : 10px;
+			padding-top : 20px;
+			padding-bottom : 20px;
+			word-wrap : break-word;
+			color : #FFFFFF;
+			text-align : left;
+			font-weight : 400;
+		}
+		
+		.replyCommentsText{
+			background-color : #F9F9F9;
+			border-radius : 10px;
+			width : 535px;
+			margin-left : 45px;
+			height : auto;
+			padding : 10px;
+			padding-top : 20px;
+			padding-bottom : 20px;
+			word-wrap : break-word;
+			color : #2D2D2D;
+			text-align : left;
+			font-weight : 400;
+		}
+		
+		/* 댓글 끝 */
+		
+		/* 글 본문 끝 */
+		
+		/* 프로젝트 CSS */
+		.articleListMyProjects{
+			width : 900px;
+			height : 250px;
+			margin-top : 10px;
+			display : flex;
+			flex-direction : column;
+			justify-content : flex-start;
+		}
+		
+		.articleListMyProjects span{
+			font-family : 'Noto Sans KR', sans-serif;
+		}
+		
+		.articleListMyProjectsTitle{
+			font-size : 24px;
+			font-weight : 900;
+			color : #2D2D2D;
+		}
+		
+		.articleListMyProjectsElementWrap{
+			width : 900px;
+			height : 100%;
+			padding-top : 10px;
+			display : flex;
+			justify-content : flex-start;
+			flex-grow : 1;
+		}
+		
+		.articleListMyProjectsElement{
+			width : 180px;
+			height : 180px;
+			border-radius : 5px;
+			background-color : rgb(250,250,250);
+		}
+		
+		.articleListMyProjectsElementText{
+			position : relative;
+			z-index : 1;
+			width : 180px;
+			height : 180px;
+			padding-top : 5px;
+			padding-bottom : 5px;
+			border-radius : 5px;
+			background-color : rgba(0,0,0,0);
+			color : rgba(0,0,0,0);
+			text-align : center;
+			display: table-cell; 
+			vertical-align: middle; 
+			word-break : break-all;
+			overflow : hidden;
+		}
+		
+		.articleListMyProjectsElementText:hover{
+			animation : myProjectSlowUp 0.5s forwards ease-in-out;
+		}
+		
+		.articleListMyProjectsImg{
+			position : absolute;
+			z-index : 0;
+			margin-top : 5px;
+			margin-left : 5px;
+			width : 170px;
+			height : 170px;
+			border-radius: 5px;
+			object-fit : contain;
+		}
+		/* 프로젝트 CSS 끝 */
+		
+		/* 사이드 바 시작 */
+		/* 폐기 */
+		.sideBarWrap{
+			position : fixed;
+			height : 100vh;
+			width : 30%;
+			display : flex;
+			display : none;
+			justify-content : center;
+			align-items : center;
+		}
+		
+		@media screen and (max-width : 1500px){
+			.sideBarWrap{
+				display : none;
+			}
+		}
+		
+		.sideBar{
+			width : 250px;
+			min-height : 300px;
+			border-radius : 10px;
+			overflow : auto;
+			display : flex;
+			flex-direction : column;
+			align-items : center;
+			justify-content : flex-start;
+		}
+		
+		.sideBarBlogOwnerInfo{
+			background-color : rgba(0,0,0,0.8);
+			width : 210px;
+			padding : 10px;
+			border-radius : 10px;
+			height : 50px;
+			display : flex;
+			justify-content : flex-start;
+		}
+		
+		.sideBarBlogOwnerInfoImg{
+			width : 50px;
+			height : 50px;
+			border-radius : 25px;
+			background-color : #6470E7;
+			flex : none;
+		}
+		
+		.sideBarBlogOwnerInfoNameWrap{
+			display : table;
+		}
+		
+		.sideBarBlogOwnerInfoName{
+			max-width : 155px;
+			height : 50px;
+			font-size : 18px;
+			color : #FFFFFF;
+			font-weight : 500;
+			white-space : nowrap;
+			text-overflow : ellipsis;
+			overflow : hidden;
+			display: table-cell;
+			padding-left: 10px;
+			text-align: left;
+			vertical-align: middle;
+		}
+		
+		.sideBarContents{
+			width : 230px;
+			padding-left : 10px;
+			margin-top : 10px;
+			text-align : left;
+			font-weight : 500px;
+			font-size : 20px;
+		}
+		
+		.sideBarElements{
+			width : 230px;
+			padding-left : 10px;
+			padding-right : 10px;
+			text-align : left;
+			font-weight : 400px;
+			font-size : 17px;
+			height : auto;
+		}
+		
+		.tag{
+			margin-top : 10px;
+			width : auto;
+			height : auto;
+			display: inline-block;
+		}
+		
+		.tagWrap{
+			width : auto;
+			display: inline-block;
+			padding : 3px;
+			height : auto;
+			border-radius : 5px;
+			background-color : rgba(157, 221, 246, 0.7);
+		}
+		
+		.tagWrap a{
+			color: #F9F9F9 !important;
+		}
+		.tagWrap a:link {
+  		color : #F9F9F9;
+			text-decoration:none; !important 
+		}
+		.tagWrap a:visited {
+			color : #F9F9F9;
+			text-decoration:none; !important 
+		}
+		.tagWrap a:hover {
+			color : #2D2D2D !important
+		}
+		.tagWrap a:active {
+			color : #F9F9F9;
+			text-decoration:none !important 
+		}
+		
+		.counter{
+			width : auto;
+			height : auto;
+			margin-top : 5px;
+			padding : 5px;
+			background-color : rgba(0,0,0,0.8);
+			border-radius : 5px;
+		}
+		
+		.counter span{
+			color : #FFFFFF;
+		}
+		
+		/* 사이드 바 끝 */
+		
+		/* 페이징 시작*/
+		.articleListPaging{
+			margin-top : 10px;
+			width : 100%;
+			height : 40px;
+			display : flex;
+			justify-content : center;
+			align-items : center;
+		}
+		/* 페이징 끝*/

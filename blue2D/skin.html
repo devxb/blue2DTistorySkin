@@ -1,0 +1,257 @@
+<!DOCTYPE.html>
+
+<html>
+	
+	<head>
+		<title>[##_page_title_##]</title>
+		<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	
+	<body>
+		<!-- 네비게이션 바 시작 -->
+		<div class = "nav">
+			<div class = "navInner">
+				<a href = "[##_blog_link_##]" class = "blogTitle">[##_title_##]</a>
+				
+				<!--<span id = "categoryTrig" onclick = "openCategory()" class = "navCategoryBtn"> Category </span>-->
+				<img id = "categoryTrig" onclick = "openCategory()" class = "navCategoryBtn" src = "./images/contents.svg"/>
+			</div>
+			<a href = "[##_blog_link_##]" class = "logo"> <img src = "./images/logo.svg"/> </a>
+		</div>
+		<!-- 네비게이션 바 끝 -->
+		
+		
+<!-- 글 시작 -->
+		<div class = "articleListLayer" align = "center">
+				<s_article_rep>
+					<!-- 글 리스트 시작 -->
+						<s_index_article_rep>
+							<a href = "[##_article_rep_link_##]" class = "article">
+								<s_article_rep_thumbnail>
+									<div class = "articleImage"> <img src = "[##_article_rep_thumbnail_url_##]"/> </div>
+								</s_article_rep_thumbnail>
+								<div class = "articleText">
+									<span class = "articleTextTitle"> [##_article_rep_title_##]</span>
+									<span class = "articleTextBody" align = "left"> [##_article_rep_summary_##]</span>
+									<span class = "articleTextFoot" align = "left"> [##_article_rep_category_##] / [##_article_rep_simple_date_##] / [##_article_rep_author_##]</span>
+								</div>
+							</a>
+						</s_index_article_rep>
+					<!-- 글 리스트 끝 -->
+					
+				<!-- 글 본문 시작 -->
+					<s_permalink_article_rep>
+						<div class = "articleMain">
+							<!-- 글 저자 정보 -->
+							<div class = "articleMainAuthor">
+								<img class = "articleMainAuthorImg" src = "[##_image_##]"/>
+								<div class = "articleMainAuthorInfo">
+									<span class = "author"> [##_blogger_##] </span>
+									<span class = "blogInfo"> [##_desc_##] </span>
+									<a href = "https:github.com/devxb" class = "additionalBtnWrap">
+										<div class = "additionalBtn" align="center"> <span class = "additionalBtnText"> Github </span> </div>
+									</a>
+								</div>
+							</div>
+							<!-- 글 저자 정보 끝-->
+							<!-- 본문 헤드 -->
+							<span class = "articleHead">
+								[##_article_rep_title_##]
+							</span>
+							<span class = "articleHeadSub">
+								[##_article_rep_category_##] / [##_article_rep_simple_date_##] / 
+								<s_ad_div> 
+									<a href="[##_s_ad_m_link_##]">수정</a> / <a href="#" onclick="[##_s_ad_d_onclick_##]">삭제</a> 
+								</s_ad_div>
+							</span>
+							<!-- 본문 헤드 끝 -->
+							<hr style="border: solid 1px #D9D9D9; border-radius : 15px; width : 600px; margin-top : 20px; margin-bottom : 20px;" align = "center"/>
+							<!-- 본문 시작 -->
+							<span class = "articleBody">
+								[##_article_rep_desc_##]
+							</span>
+							<!-- 본문 끝 -->
+							<!-- 내 프로젝트 보여주는 칸 시작-->
+							<!--
+							<hr style="border: solid 1px #D9D9D9; border-radius : 15px; width : 600px; margin-top : 20px; margin-bottom : 20px;" align = "center"/>
+							<div class = "articleListMyProjects">
+								<span class = "articleListMyProjectsTitle" align = "left"> <span style = "color : #6470E7; font-size : 24px;"> ❤ </span> My projects </span>
+								<div class = "articleListMyProjectsElementWrap">
+									<div class = "articleListMyProjectsElement">
+										<a href = "https://github.com/devxb/commitcombo">
+											<img src = "https://user-images.githubusercontent.com/62425964/125164838-478f8500-e1cf-11eb-9a1c-bf7ffda3b170.png" class = "articleListMyProjectsImg" align = "center"/>
+											<span class = "articleListMyProjectsElementText"> 
+												Commitcombo  깃허브 커밋기록을 아름답게 꾸미세요 
+												<br> Click here!
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<hr style="border: solid 1px #D9D9D9; border-radius : 15px; width : 600px; margin-top : 20px; margin-bottom : 20px;" align = "center"/>
+							-->
+	<!-- 내 프로젝트 보여주는 칸 끝-->
+							<!-- 댓글 시작 -->
+							<s_rp>
+								<div class = "comments">
+									<s_rp_input_form>
+										<div class = "commentsAddBox">
+      								<textarea name="[##_rp_input_comment_##]" rows="10" cols="50" class = "commentsInputForm"></textarea>
+      									<input type="image" src= "./images/commentsArrow.svg" onclick="[##_rp_onclick_submit_##]" class = "commentsInputButton"/>
+										</div>
+										<div align = "right">
+											<label for="secret"><span>비밀글</span></label><input type="checkbox" name="[##_rp_input_is_secret_##]" class="checkbox"/>
+      							</div>
+									</s_rp_input_form>
+									<s_rp_container>
+										<s_rp_rep>
+											<div id = "[##_rp_rep_id_##]">
+												<div class="[##_rp_rep_class_##]">
+													<div class = "userCommentsWrap">
+														<div class = "userCommentsInfoWrap">
+															<img class = "userCommentsImg" src = "[##_rp_rep_logo_##]"/>
+															<span class = "userCommentsName">[##_rp_rep_name_##] <span class = "userCommentsNameSub">/ [##_rp_rep_date_##] </span> </span>
+															<div class = "userCommentsControl">
+              									<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;
+               										<span>modify / delete</span>
+              									</a>
+              									<a href="#" onclick="[##_rp_rep_onclick_reply_##]" class="write">&nbsp;
+                									<span>/ reply</span>
+              									</a>
+															</div>
+														</div>
+														<span class = "commentsText">
+															[##_rp_rep_desc_##]
+														</span>
+													</div>
+												</div>
+												<s_rp2_container>
+													<s_rp2_rep>
+														<div id = "[##_rp_rep_id_##]">
+															<div class="[##_rp_rep_class_##]">
+																<div class = "userCommentsWrap">
+																	<div class = "userCommentsInfoWrap">
+																		<img class = "userCommentsImg" src = "[##_rp_rep_logo_##]"/>
+																		<span class = "userCommentsName">[##_rp_rep_name_##] <span class = "userCommentsNameSub">/ [##_rp_rep_date_##] </span> </span>
+																		<div class = "userCommentsControl">
+              												<a href="#" onclick="[##_rp_rep_onclick_delete_##]" class="modify">&nbsp;
+               													<span>modify / delete</span>
+              												</a>
+																		</div>
+																	</div>
+																	<span class = "replyCommentsText">
+																		[##_rp_rep_desc_##]
+																	</span>
+																</div>
+															</div>
+														</div>
+													</s_rp2_rep>
+												</s_rp2_container>
+											</div>
+										</s_rp_rep>
+									</s_rp_container>
+								</div>
+								
+							</s_rp>
+							<!-- 댓글 끝 -->
+						</div>
+					</s_permalink_article_rep>
+				<!-- 글 본문 끝 -->
+					
+				</s_article_rep>
+<!-- 글 끝 -->
+			
+			<!-- 페이징 시작 --> 
+			<div class = "articleListPaging"> 
+				<s_paging>
+							<div>
+								<span>
+									<a [##_prev_page_##] class="[##_no_more_prev_##]"> <img class = "pagingArrow" src = "./images/pageLeftArrow.svg"/> </a>
+									<s_paging_rep>
+										<a [##_paging_rep_link_##]>[##_paging_rep_link_num_##]</a>
+									</s_paging_rep>
+									<a [##_next_page_##] class="[##_no_more_next_##]"> <img class = "pagingArrow" src = "./images/pageRightArrow.svg"/> </a>
+								</span>
+							</div>
+
+							<div>
+								<div>
+									<a [##_prev_page_##] class="[##_no_more_prev_##]">
+									</a>
+									<a [##_next_page_##] class="[##_no_more_next_##]">
+									</a>
+								</div>
+							</div>
+				</s_paging>
+			</div>
+			<!-- 페이징 끝 -->
+		</div>
+		<!-- 글 끝 -->
+		
+		<!-- 사이드 바 시작 -->
+		<div class = "sideBarWrap">
+			
+			<div class = "sideBar">
+				<div class = "sideBarBlogOwnerInfo">
+					<img src = "[##_image_##]" class = "sideBarBlogOwnerInfoImg"/>
+					<div class ="sideBarBlogOwnerInfoNameWrap">
+						<span class = "sideBarBlogOwnerInfoName"> [##_blogger_##] </span>
+					</div>
+				</div>
+				<hr style = "border: solid 1px #F1F1F1; width : 220px; border-radius : 10px;"/>
+				<div class = "sideBarElements">
+					<s_sidebar>
+						<!-- 오른쪽 사이드바 -->
+						
+						<s_sidebar_element>
+  						<!-- 방문자 수 -->
+  						<div class="counter">
+   				 			<span class="total">Total #[##_count_total_##] </span> <br>
+    						<span class="today">Today #[##_count_today_##]</span> <br>
+    						<span class="yesterday">Yesterday #[##_count_yesterday_##]</span>
+  						</div>
+						</s_sidebar_element>
+						
+						<s_sidebar_element>
+     					<!-- 랜덤 태그 -->
+							<div class = "tag">
+      					<s_random_tags>
+									<div class = "tagWrap">
+        					<a href="[##_tag_link_##]" class="[##_tag_class_##]"> [##_tag_name_##]</a>
+									</div>
+								</s_random_tags>
+							</div>
+    				</s_sidebar_element>
+						
+					</s_sidebar>
+				</div>
+			</div>
+			
+		</div>
+		<!-- 사이드 바 끝 -->
+		
+		<!-- 콘텐츠 박스 시작 -->
+		<div style = "width : 100vw; height : 100vh; overflow : hidden" align = "right">
+			<div class = "categoryBackground" id = "category" align = "left">
+				<div class = "categoryBackgroundTop">
+					<span style = "color : #FFFFFF;"> Category </span>
+					<hr style="border:4px color= #FFFFFF;" width="300px" align = "left"/>
+				</div>
+				<div class = "categoryList">
+						[##_category_list_##]
+				</div>
+				<div id = "categoryCloseCircle" onclick = "closeCategory()" class = "categoryCloseCircle" align="center"> <span id = "categoryCloseCircle" onclick = "closeCategory()" style ="color : #FFFFFF; font-size : 25px; pointer-events : auto; cursor : pointer; -ms-user-select: none;
+			-moz-user-select: -moz-none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			user-select:none;"> > </span>
+			</div>
+			</div>
+		</div>
+		<!-- 콘텐츠 박스 끝 -->
+		<s_t3>
+		</s_t3>
+		<script src="./images/script.js"></script>
+	</body>
+	
+</html>
