@@ -204,7 +204,22 @@
 			width : 50%;
 			height : 20px;
 		}
-		
+		.categoryBackgroundTop a:link {
+  		color : #FFFFFF;
+			text-decoration:none !important 
+		}
+		.categoryBackgroundTop a:visited {
+			color : #FFFFFF;
+			text-decoration:none !important 
+		}
+		.categoryBackgroundTop a:hover {
+  		animation : slowUpCategoryColor 0.2s forwards ease-out;
+		}
+		.categoryBackgroundTop a:active {
+			color : #FFFFFF;
+			text-decoration:none !important 
+		}
+
 		.categoryCloseCircle{
 			display : flex;
 			justify-content : center;
