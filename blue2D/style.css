@@ -597,9 +597,13 @@
 		
 		.userCommentsNameSub{
 			color : #C4C4C4;
+			height : 100%;
 			font-size : 12px;
 			font-weight : 500;
 			flex : none;
+			display : flex;
+			justify-content : flex-start;
+			align-items : center;
 		}
 		
 		.userCommentsControl{
