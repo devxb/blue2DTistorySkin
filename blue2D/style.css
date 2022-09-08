@@ -273,7 +273,10 @@
 			width : 100vw;
 			height : 100vh;
 			z-index : 0;
-		} 
+			display : flex;
+			justify-content : center;
+		}
+
 		.artlcieListLayer a {
 			font-family : 'Noto Sans KR', sans-serif;
 			font-size : 16px;
@@ -292,7 +295,14 @@
 			font-weight : 500;
 			color : #2D2D2D;
 		}
-		
+
+		.articleListRepLayer{
+			width : 900px;
+			display : flex;
+			flex-direction : column;
+			justify-content : flex-start;
+		}
+
 		.articleListLayer a:link {
   		color : #FFFFFF;
 			text-decoration:none; !important 
@@ -309,6 +319,14 @@
 			text-decoration:none !important 
 		}
 		
+		.articleListLayerWrap{
+			margin-left : -200px;
+			display : flex;
+			flex-direction : row;
+			justify-content : center;
+			-ms-overflow-style: none; /* IE and Edge */
+		}
+
 		.article{
 			margin-top : 10px;
 			background-color : #F9F9F9;
@@ -477,6 +495,7 @@
 			font-weight : 700;
 			display : inline-block; 
 			text-align : center;
+			align-items : center;
 			word-wrap : break-word;
 		}
 		
@@ -484,6 +503,10 @@
 			color : #626262;
 			font-size : 16px;
 			font-weight : 400;
+			width : 900px;
+			align-items: center;
+			text-align: center;
+			align-content: center;
 		}
 		
 		.articleHeadSub a{
@@ -649,19 +672,25 @@
 		
 		/* 프로젝트 CSS */
 		.articleListMyProjects{
-			width : 900px;
-			height : 250px;
+			margin-left : 55px;
+			margin-top : 55px;
+			width : 200px;
+			height : auto;
 			margin-top : 10px;
 			display : flex;
 			flex-direction : column;
 			justify-content : flex-start;
 		}
-		
+		@media screen and (max-width: 900px) {
+  		.articleListMyProjects {
+  		}
+		}
 		.articleListMyProjects span{
 			font-family : 'Noto Sans KR', sans-serif;
 		}
 		
 		.articleListMyProjectsTitle{
+			margin-top : 100px;
 			font-size : 24px;
 			font-weight : 900;
 			color : #2D2D2D;
@@ -672,6 +701,7 @@
 			height : 100%;
 			padding-top : 10px;
 			display : flex;
+			flex-direction : column;
 			justify-content : flex-start;
 			flex-grow : 1;
 		}
